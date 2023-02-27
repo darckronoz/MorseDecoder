@@ -1,21 +1,34 @@
 
+const msgInput = document.querySelector('#msgInput');
+const morseInput = document.querySelector('#morseInput');
+const toStringBtn = document.querySelector('#convertToString');
+const toMorseBtn = document.querySelector('#convertToMorse');
+
 class MorseDecoder {
-    constructor(msg, code, morse) {
+    constructor(msg, morse, code) {
         this.msg = msg;
         this.code = code;
-        this.morse = morse;
+        this.morse = morse.split(' ');
     }
 
     encode() {
         let result = '';
-        this.msg.forEach(n => {
-            result += this.code.get(n.toUpperCase());
+        this.msg.split('').forEach(n => {
+            result += this.code.get(n.toUpperCase()) + ' ';
         });
         return result;
     }
 
     get_key_from_val(val) {
         return [...this.code].find(([key, value]) => val === value)[0];
+    }
+
+    decode() {
+        let result = '';
+        this.morse.forEach(n => {
+            result += this.get_key_from_val(n) + ' ';
+        });
+        return result;
     }
 }
 
@@ -26,3 +39,6 @@ const code = new Map([
     ['Y', '-.--'], ['Z', '..--'], ['Á', '.--.-'], ['É', '..-..'], ['Ñ', '--.--'], ['Ó', '---.'],
     [' ', '.......']
 ]);
+const decoder = new MorseDecoder('SOS', '... --- ...', code);
+console.log(decoder.encode())
+console.log(decoder.decode())
