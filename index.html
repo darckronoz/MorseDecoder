@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Morse Decoder</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Morse Decoder</h1>
-		<script src="main.js"></script>
-		<div class="decoder">
+		<div class="decoder-text">
+			<h2>TEXT</h2>
+			<h3>morse to text and text to morse</h3>
 			<input type="text" id="msgInput" placeholder="string here">
-			<button id="convertToString">to String</button>
+			<button id="convertToMorse">to Morse</button>
 			<input type="text" id="morseInput" placeholder="morse here">
+			<button id="convertToString">to String</button>
+		</div>
+		<div class="decoder-audio">
+			<h2>AUDIO</h2>
+			<h3>text to morse audio</h3>
+			<input type="text" id="msgInput" placeholder="string here">
 			<button id="convertToMorse">to Morse</button>
 		</div>
+		<script src="main.js"></script>
 	</body>
 </html>

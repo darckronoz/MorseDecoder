@@ -8,7 +8,15 @@ class MorseDecoder {
     constructor(msg, morse, code) {
         this.msg = msg;
         this.code = code;
-        this.morse = morse.split(' ');
+        this.morse = morse;
+    }
+
+    setMorse(morse) {
+        this.morse = morse;
+    }
+
+    setMsg(msg) {
+        this.msg = msg;
     }
 
     encode() {
@@ -25,7 +33,7 @@ class MorseDecoder {
 
     decode() {
         let result = '';
-        this.morse.forEach(n => {
+        this.morse.split(' ').forEach(n => {
             result += this.get_key_from_val(n) + ' ';
         });
         return result;
@@ -39,6 +47,22 @@ const code = new Map([
     ['Y', '-.--'], ['Z', '..--'], ['Á', '.--.-'], ['É', '..-..'], ['Ñ', '--.--'], ['Ó', '---.'],
     [' ', '.......']
 ]);
-const decoder = new MorseDecoder('SOS', '... --- ...', code);
-console.log(decoder.encode())
-console.log(decoder.decode())
+
+const decoder = new MorseDecoder('', '', code);
+
+toStringBtn.addEventListener('click', convertToString);
+toMorseBtn.addEventListener('click', convertToMorse);
+
+function convertToString() {
+    if(morseInput.value != ' ') {
+        decoder.setMorse(morseInput.value)
+        msgInput.value = decoder.decode();
+    }
+}
+
+function convertToMorse() {
+    if(msgInput.value != ' ') {
+        decoder.setMsg(msgInput.value)
+        morseInput.value = decoder.encode();
+    }
+}
