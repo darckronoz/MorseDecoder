@@ -1,5 +1,3 @@
-/*comment xd*/
-
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +7,6 @@
 /* Set font */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Set background color */
-body {
   background-color: #1a1a1a;
 }
 
@@ -38,23 +32,23 @@ h1 {
 }
 
 /* Style the decoder text section */
-.decoder-text {
+.decoder {
   width: 100%;
   max-width: 800px;
   margin-bottom: 2rem;
 }
 
-.decoder-text h2 {
+.decoder h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.decoder-text h3 {
+.decoder h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.decoder-text input[type="text"] {
+.decoder input[type="text"] {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -66,49 +60,7 @@ h1 {
   font-size: 1.2rem;
 }
 
-.decoder-text button {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: #33aaff;
-  border: none;
-  border-radius: 0.25rem;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Style the decoder audio section */
-.decoder-audio {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 2rem;
-}
-
-.decoder-audio h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.decoder-audio h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.decoder-audio input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: #333;
-  border: none;
-  border-radius: 0.25rem;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.decoder-audio button {
+.decoder button {
   display: block;
   width: 100%;
   padding: 1rem;
