@@ -24,7 +24,7 @@ h1 {
 }
 
 /* Style the decoder section */
-.decoder {
+main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
