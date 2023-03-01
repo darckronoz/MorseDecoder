@@ -7,6 +7,14 @@ const audioMsgInput = document.querySelector('#audio-msgInput');
 const toAudioMorseBtn = document.querySelector('#toAudioMorseBtn');
 
 class MorseDecoder {
+    /**
+     * This class contain the necesary methods for decode and encode
+     * morse code with text, and decode with audio
+     * @param {*} msg - The message text that is going to be encoded
+     * @param {*} morse - The morse code text that is going to be decoded
+     * @param {*} code - The morse code dictionary used to translate
+     * @param {*} codeAudio - 
+     */
     constructor(msg, morse, code, codeAudio) {
         this.msg = msg;
         this.code = code;
