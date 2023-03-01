@@ -3,7 +3,7 @@ this is a repo with educational purposes.
 ______________________________________________
 
   - Cristhian Vargas
-  - nombre 2
+  - Nicolas Gil
   - nombre 3
  
 _______________________________________________
