@@ -76,7 +76,6 @@ Decodes a message in Morse code to its equivalent in plain text.
   }
 
   /**
-
 Decodes the message into Morse code audio.
 */
   decodeAudio() {
@@ -151,6 +150,9 @@ const code = new Map([
 
 const audioCode = new Map([]);
 
+/**
+Fills an array with the corresponding morse code audio values for each letter of the code.
+*/
 function fillAudioList() {
   a = [...code.keys()];
   a.forEach((letter) => {
@@ -160,6 +162,10 @@ function fillAudioList() {
   });
 }
 
+/**
+Fills the audioCode map with the corresponding Audio objects for each letter in the code map.
+The letter and its corresponding Audio object are set as key-value pairs in the audioCode map.
+*/
 function fillAudioMap() {
   letters = [...code.keys()];
   let i = 0;
@@ -173,10 +179,18 @@ fillAudioList();
 fillAudioMap();
 const decoder = new MorseDecoder("", "", code, audioCode);
 
+/**
+ * Adds event listeners to the three button elements and assigns them their respective conversion functions.
+ *
+ * @listens click
+ */
 toStringBtn.addEventListener("click", convertToString);
 toMorseBtn.addEventListener("click", convertToMorse);
 toAudioMorseBtn.addEventListener("click", convertToAudio);
 
+/**
+ * Converts the Morse code input to plain text and displays it in the message input field.
+ */
 function convertToString() {
   if (morseInput.value != " ") {
     decoder.setMorse(morseInput.value);
@@ -184,6 +198,9 @@ function convertToString() {
   }
 }
 
+/**
+Converts a plain text message to its equivalent in Morse code.
+*/
 function convertToMorse() {
   if (msgInput.value != " ") {
     decoder.setMsg(msgInput.value);
@@ -191,6 +208,9 @@ function convertToMorse() {
   }
 }
 
+/**
+Converts the message in the audioMsgInput input field to Morse code and plays the corresponding audio.
+*/
 function convertToAudio() {
   if (audioMsgInput.value != " ") {
     decoder.setMsg(audioMsgInput.value);
