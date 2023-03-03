@@ -6,25 +6,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Morse Decoder</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin: 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Morse Decoder</h1>
-		<main>
-			<div class="decoder">
+		<div class="container">
+			<video autoplay muted loop id="bg-video">
+				<source src="video/background.mp4.mp4" type="video/mp4">
+			</video>
+			<h1 id="matrix-title">Morse Decoder</h1>
+			<div class="decoder-text">
 				<h2>TEXT</h2>
-				<h3>morse to text and text to morse</h3>
-				<input type="text" id="msgInput" placeholder="string here">
-				<button id="convertToMorse">to Morse</button>
-				<input type="text" id="morseInput" placeholder="morse here">
-				<button id="convertToString">to String</button>
+				<h3>Morse to Text and Text to Morse</h3>
+				<input type="text" id="msgInput" placeholder="Enter the word to convert">
+				<button id="convertToMorse" class="btn-morse">to Morse</button>
+				<input type="text" id="morseInput" placeholder="Here will be your result" readonly>
+				<button id="convertToString" class="btn-morse">to Text</button>
 			</div>
-			<div class="decoder">
+			<div class="decoder-audio">
 				<h2>AUDIO</h2>
-				<h3>text to morse audio</h3>
-				<input type="text" id="audio-msgInput" placeholder="string here">
-				<button id="toAudioMorseBtn">to Audio Morse</button>
+				<h3>Text to Morse audio</h3>
+				<input type="text" id="audio-msgInput" placeholder="Enter the word to reproduce">
+				<button id="toAudioMorseBtn" class="btn-morse">to Audio Morse</button>
 			</div>
-		</main>
+		</div>
 		<script src="main.js"></script>
 	</body>
 </html>
