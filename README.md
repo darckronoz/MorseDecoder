@@ -10,9 +10,10 @@ ______________________________________________
  
 _______________________________________________
 
-- the audio works on local but not on pages.
+- [x] the audio works on local but not on pages.
+  fixed, somehow it works now xd
 
 # TO-DO
   - [ ] change the audio local paths for audios on the web...(can be also upload the audios to a database, link the database and reference the audios from the data base )
   - [ ] delete assets folder
-  - [ ] :D
+  - [x] :D
